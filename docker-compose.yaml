@@ -6,7 +6,7 @@ services:
         - "8000:8000"
       volumes:
        - type: bind
-         source: db.sqlite3
+         source: ./db.sqlite3
          target: /usr/src/app/db.sqlite3
        - type: bind
          source: ./Restful_Api/static
