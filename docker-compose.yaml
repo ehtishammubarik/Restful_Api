@@ -1,0 +1,13 @@
+version: "3.2"
+services:
+     web:
+      build: . 
+      ports: 
+        - "8000:8000"
+      volumes:
+       - type: bind
+         source: db.sqlite3
+         target: /usr/src/app/db.sqlite3
+       - type: bind
+         source: ./Restful_Api/static
+         target: /usr/src/app/Restful_Api/static
