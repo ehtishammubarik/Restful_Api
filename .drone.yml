@@ -1,9 +1,15 @@
-name: drone-test
 kind: pipeline
-type: docker
+name: default
 
 steps:
 - name: test
-  image: alpine
+  image: compose:1.23.2
+  volumes:
+  - name: docker_sock
+    path: /var/run/docker.sock
   commands:
-  - docker-compose up -d
+  - up -f docker-compose.yaml
+volumes:
+  - name: docker_sock
+    host:
+      path: /var/run/docker.sock
