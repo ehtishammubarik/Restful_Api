@@ -3,7 +3,7 @@ type: docker
 kind: pipeline
 steps:
 - name: test
-  image: compose:1.23.2
+  image: compose:latest
   volumes:
   - name: docker_sock
     path: /var/run/docker.sock
