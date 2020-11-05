@@ -4,12 +4,12 @@ type: docker
 
 steps:
 - name: test
-  image: dind
+  image: docker/compose
   volumes:
   - name: docker_sock
     path: /var/run/docker.sock
   commands:
-  - up
+  - docker-compose up -d
 volumes:
   - name: docker_sock
     host:
