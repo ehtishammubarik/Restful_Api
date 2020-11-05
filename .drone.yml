@@ -1,6 +1,6 @@
+name: drone-test
+type: docker
 kind: pipeline
-name: default
-
 steps:
 - name: test
   image: compose:1.23.2
