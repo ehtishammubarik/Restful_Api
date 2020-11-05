@@ -4,7 +4,7 @@ type: docker
 
 steps:
 - name: test
-  image: compose:1.23.2
+  image: dind
   volumes:
   - name: docker_sock
     path: /var/run/docker.sock
