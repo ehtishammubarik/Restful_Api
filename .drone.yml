@@ -1,15 +1,9 @@
 name: drone-test
-type: docker
 kind: pipeline
+type: docker
+
 steps:
 - name: test
-  image: compose:latest
-  volumes:
-  - name: docker_sock
-    path: /var/run/docker.sock
+  image: alpine
   commands:
-  - up
-volumes:
-  - name: docker_sock
-    host:
-      path: /var/run/docker.sock
+  - echo "It worked!"
