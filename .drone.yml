@@ -9,6 +9,7 @@ steps:
   - name: docker_sock
     path: /var/run/docker.sock
   commands:
+  - whoami
   - docker-compose down
 volumes:
   - name: docker_sock
