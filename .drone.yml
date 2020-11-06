@@ -10,7 +10,7 @@ steps:
     path: /var/run/docker.sock
   commands:
   - whoami
-  - docker-compose down
+  - docker-compose up -d
 volumes:
   - name: docker_sock
     host:
